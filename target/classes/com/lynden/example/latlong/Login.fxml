@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lynden.example.latlong.LoginController">
+   <children>
+      <TextField fx:id="login_text" layoutX="357.0" layoutY="164.0" prefHeight="36.0" prefWidth="202.0" promptText="Email" />
+      <TextField fx:id="login_password" layoutX="357.0" layoutY="208.0" prefHeight="36.0" prefWidth="202.0" promptText="Password" />
+      <CheckBox contentDisplay="BOTTOM" graphicTextGap="3.0" layoutX="67.0" layoutY="363.0" mnemonicParsing="false" prefHeight="9.0" prefWidth="133.0" selected="true" style="-fx-text-fill: white;" text="Remember Me" underline="true" />
+      <Label layoutX="407.0" layoutY="364.0" prefHeight="6.0" prefWidth="102.0" style="-fx-text-fill: white;" text="Forgot Password" underline="true" />
+      <Label alignment="CENTER" layoutX="185.0" layoutY="28.0" prefHeight="61.0" prefWidth="231.0" text="U Dirty Rat" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="30.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.47" specularConstant="1.61" specularExponent="28.14" surfaceScale="5.23">
+               <bumpInput>
+                  <Shadow color="#df2a2a" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <Label layoutX="440.0" layoutY="136.0" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Semilight" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="login_button" layoutX="357.0" layoutY="261.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="111.0" style="-fx-border-radius: 0px; -fx-background-color: #2f2f2f; -fx-text-fill: white; -fx-border-color: grey; -fx-border-width: 0.3px;" text="Login">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="13.0" />
+         </font></Button>
+      <Button fx:id="register_button" layoutX="499.0" layoutY="261.0" mnemonicParsing="false" onAction="#goToRegister" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: #979797; -fx-border-color: grey; -fx-border-width: 0.3px; -fx-background-radius: 0px;" text="Signup" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="477.0" layoutY="268.0" style="-fx-text-fill: #f3f3f3;" text="or" textFill="WHITE" />
+      <ImageView fitHeight="225.0" fitWidth="252.0" layoutX="14.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/ratwhite.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.38" specularConstant="0.89" specularExponent="32.33" surfaceScale="7.37">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Label fx:id="errormsg" layoutX="67.0" layoutY="331.0" textFill="RED">
+         <font>
+            <Font name="Yu Gothic Regular" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

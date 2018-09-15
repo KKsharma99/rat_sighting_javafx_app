@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lynden.example.latlong.RegisterController">
+   <children>
+      <Label layoutX="220.0" layoutY="29.0" prefHeight="61.0" prefWidth="160.0" text="U Dirty Rat" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="30.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.47" specularConstant="1.61" specularExponent="28.14" surfaceScale="5.23">
+               <bumpInput>
+                  <Shadow color="#df2a2a" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+      <ImageView fitHeight="225.0" fitWidth="252.0" layoutX="14.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/ratwhite.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.38" specularConstant="0.89" specularExponent="32.33" surfaceScale="7.37">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <TextField fx:id="register_email" layoutX="357.0" layoutY="138.0" prefHeight="36.0" prefWidth="202.0" promptText="Email">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="register_password" layoutX="357.0" layoutY="182.0" prefHeight="36.0" prefWidth="202.0" promptText="Password">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="14.0" />
+         </font></TextField>
+      <Button fx:id="register" layoutX="358.0" layoutY="274.0" mnemonicParsing="false" onAction="#register" prefHeight="32.0" prefWidth="111.0" style="-fx-border-radius: 0px; -fx-background-color: #2f2f2f; -fx-text-fill: white; -fx-border-color: grey; -fx-border-width: 0.3px;" text="Signup" />
+      <Button fx:id="to_login" layoutX="500.0" layoutY="274.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: #979797; -fx-border-color: grey; -fx-border-width: 0.3px; -fx-background-radius: 0px;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font></Button>
+      <Label layoutX="478.0" layoutY="281.0" text="or" textFill="WHITE" />
+      <TextField fx:id="register_confirmpass" layoutX="357.0" layoutY="225.0" prefHeight="36.0" prefWidth="202.0" promptText="Confirm Password">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="429.0" layoutY="71.0" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Semilight" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="register_name" layoutX="357.0" layoutY="95.0" prefHeight="36.0" prefWidth="202.0" promptText="Username">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="register_error" layoutX="70.0" layoutY="87.0" textFill="RED">
+         <font>
+            <Font name="Yu Gothic Medium" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
